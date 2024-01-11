@@ -208,6 +208,7 @@ namespace CRUD.Controllers
 }
 
         [HttpPut]
+        [Authorize]
         public async Task<ActionResult> PutBrand(int id, ExamScore examscore)
         {
             if (id != examscore.Id)

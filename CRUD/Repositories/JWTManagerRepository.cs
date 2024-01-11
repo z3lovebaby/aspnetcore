@@ -26,7 +26,7 @@ namespace CRUD.Repository
 
         public Tokens GenerateJWTTokens(string userName, List<string> roles)
         {
-            try
+            /*try
             {
                 var tokenHandler = new JwtSecurityTokenHandler();
                 var tokenKey = Encoding.UTF8.GetBytes(_iconfiguration["JWT:Secret"]);
@@ -36,7 +36,7 @@ namespace CRUD.Repository
                   {
      new Claim(ClaimTypes.Name, userName)
                   }),
-                    Expires = DateTime.Now.AddMinutes(1),
+                    Expires = DateTime.Now.AddMinutes(15),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)
                 };
 
@@ -47,7 +47,24 @@ namespace CRUD.Repository
             catch (Exception ex)
             {
                 return null;
-            }
+            }*/
+            var claims = new List<Claim>()
+            {
+                new Claim(ClaimTypes.Name, userName),
+            };
+            claims.AddRange(roles.Select(role=>new Claim(ClaimTypes.Role, role)));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_iconfiguration["JWT:Secret"]));
+            var credentials = new SigningCredentials(key,SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                issuer: _iconfiguration["JWT:Issuer"],
+                audience: _iconfiguration["JWT:Audience"],
+                claims: claims,
+                expires: DateTime.Now.AddMinutes(15),
+                signingCredentials:credentials
+                );
+            var refreshToken = GenerateRefreshToken();
+            return new Tokens { AccessToken =new JwtSecurityTokenHandler().WriteToken(token), RefreshToken = refreshToken };
         }
 
 

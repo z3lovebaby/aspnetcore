@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\source\\repos\\CRUD\\CRUD\\CRUD.csproj": {}
+    "C:\\Users\\diepp\\source\\z3lovebaby\\aspnetcore\\CRUD\\CRUD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\source\\repos\\CRUD\\CRUD\\CRUD.csproj": {
+    "C:\\Users\\diepp\\source\\z3lovebaby\\aspnetcore\\CRUD\\CRUD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\CRUD\\CRUD\\CRUD.csproj",
+        "projectUniqueName": "C:\\Users\\diepp\\source\\z3lovebaby\\aspnetcore\\CRUD\\CRUD.csproj",
         "projectName": "CRUD",
-        "projectPath": "C:\\Users\\DELL\\source\\repos\\CRUD\\CRUD\\CRUD.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\source\\repos\\CRUD\\CRUD\\obj\\",
+        "projectPath": "C:\\Users\\diepp\\source\\z3lovebaby\\aspnetcore\\CRUD\\CRUD.csproj",
+        "packagesPath": "C:\\Users\\diepp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diepp\\source\\z3lovebaby\\aspnetcore\\CRUD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\diepp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -104,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
