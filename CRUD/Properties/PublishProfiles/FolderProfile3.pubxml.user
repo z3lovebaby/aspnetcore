@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot\backend</_PublishTargetUrl>
+    <History>False|2023-12-10T16:51:49.2004919Z;False|2023-12-10T23:50:50.4227146+07:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="CRUD">
+      <Value>server=DESKTOP-SSEAPFS%3bdatabase = CRUDDb%3bIntegrated Security = True%3bMultipleActiveResultSets = true%3bTrustServerCertificate=True</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

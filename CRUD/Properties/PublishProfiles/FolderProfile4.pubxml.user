@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\DELL\source\repos\CRUD\CRUD\bin\Release\net6.0\publish\</_PublishTargetUrl>
+    <History>True|2023-12-10T17:09:10.8297912Z;True|2023-12-10T23:52:22.2760209+07:00;</History>
+    <LastFailureDetails />
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="CRUD">
+      <Value>server=DESKTOP-SSEAPFS%3bdatabase = CRUDDb%3bIntegrated Security = True%3bMultipleActiveResultSets = true%3bTrustServerCertificate=True</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
