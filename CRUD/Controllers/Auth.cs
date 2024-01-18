@@ -124,10 +124,8 @@ namespace CRUD.Controllers
         {
             var principal = jWTManager.GetPrincipalFromExpiredToken(token.AccessToken);
             var username = principal.Identity?.Name;
-
             //retrieve the saved refresh token from database
             var savedRefreshToken = userServiceRepository.GetSavedRefreshTokens(username, token.RefreshToken);
-
             if (savedRefreshToken.RefreshToken != token.RefreshToken)
             {
                 return Unauthorized("Invalid attempt!");
@@ -135,7 +133,6 @@ namespace CRUD.Controllers
             var identityUser = await userManager.FindByEmailAsync(username);
             var roles = await userManager.GetRolesAsync(identityUser);
             var newJwtToken = jWTManager.GenerateRefreshToken(username, roles.ToList());
-
             if (newJwtToken == null)
             {
                 return Unauthorized("Invalid attempt!");
@@ -154,8 +151,8 @@ namespace CRUD.Controllers
 
             var response = new LoginResponseDto
             {
-                Token = token.AccessToken,
-                ReToken = token.RefreshToken,
+                Token = newJwtToken.AccessToken,
+                ReToken = newJwtToken.RefreshToken,
                 Email = username,
                 Roles = roles.ToList()
             };

@@ -60,7 +60,7 @@ namespace CRUD.Repository
                 issuer: _iconfiguration["JWT:Issuer"],
                 audience: _iconfiguration["JWT:Audience"],
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(15),
+                expires: DateTime.Now.AddMinutes(2),
                 signingCredentials:credentials
                 );
             var refreshToken = GenerateRefreshToken();

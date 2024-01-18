@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>D:\backendCRUDv1</_PublishTargetUrl>
-    <History>True|2024-01-11T10:12:15.7210456Z;True|2024-01-11T17:07:31.5579487+07:00;True|2024-01-11T17:03:39.1006129+07:00;</History>
+    <_PublishTargetUrl>D:\backendCRUDv2</_PublishTargetUrl>
+    <History>True|2024-01-18T09:20:32.2274426Z;False|2024-01-18T16:19:59.9950426+07:00;False|2024-01-18T16:19:28.5511944+07:00;False|2024-01-18T16:19:02.0621569+07:00;False|2024-01-18T16:18:48.2799363+07:00;True|2024-01-11T17:12:15.7210456+07:00;True|2024-01-11T17:07:31.5579487+07:00;True|2024-01-11T17:03:39.1006129+07:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\CRUD",
-    "\\CRUD\\Models",
-    "\\CRUD\\Repositories"
+    ""
   ],
-  "SelectedNode": "\\CRUD\\Repositories\\IAccountRespository.cs",
+  "SelectedNode": "\\CRUD.sln",
   "PreviewInSolutionExplorer": false
 }
