@@ -90,15 +90,15 @@ namespace CRUD.Migrations
                         {
                             Id = "edc267ec-d43c-4e3b-8108-a1a1f819906d",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a4df7824-498f-4c0f-9aed-61ad00bdf998",
+                            ConcurrencyStamp = "6d351eec-734e-46f8-b67b-1d56bdbb1cec",
                             Email = "admin@crud.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@CRUD.COM",
                             NormalizedUserName = "ADMIN@CRUD.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAELV3e7K7tofGtjgy6zVHov1SR0aS8HcvOAbtRSYCWCLMzNr0S6cvXWlH3jgaQiMpLQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPaxYRExcxc6tfoWajRWT6wua7PfPHiTUescE0DxfhB85+MCXfcqoR8vANnMd+rRCw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "516cf2a0-1e76-429b-b6c7-fe1a1739b78f",
+                            SecurityStamp = "d118e794-5490-4779-82f1-ddde1a00b74b",
                             TwoFactorEnabled = false,
                             UserName = "admin@crud.com"
                         });
@@ -175,6 +175,9 @@ namespace CRUD.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("ExpirationTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");

@@ -34,7 +34,7 @@ namespace CRUD.Repositories
 
         public UserRefreshTokens GetSavedRefreshTokens(string username, string refreshToken)
         {
-            return _db.UserRefreshToken.FirstOrDefault(x => x.UserName == username && x.RefreshToken == refreshToken && x.IsActive == true);
+            return _db.UserRefreshToken.FirstOrDefault(x => x.UserName == username && x.RefreshToken == refreshToken && x.IsActive == true && DateTime.Now < x.ExpirationTime);
         }
 
         public int SaveCommit()

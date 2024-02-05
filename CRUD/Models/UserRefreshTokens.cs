@@ -11,6 +11,7 @@ namespace CRUD.Models
 
         [Required]
         public string? RefreshToken { get; set; }
+        public DateTime ExpirationTime { get; set; }
 
         public bool IsActive { get; set; } = true;
     }
