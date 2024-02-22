@@ -140,20 +140,29 @@ namespace CRUD.Controllers
             }
 
             // saving refresh token to the db
-/*            UserRefreshTokens obj = new UserRefreshTokens
+            /*            UserRefreshTokens obj = new UserRefreshTokens
+                        {
+                            RefreshToken = newJwtToken.RefreshToken,
+                            UserName = username
+                        };
+
+                        userServiceRepository.DeleteUserRefreshTokens(username, token.RefreshToken);
+                        userServiceRepository.AddUserRefreshTokens(obj);
+                        userServiceRepository.SaveCommit();*/
+            UserRefreshTokens obj = new UserRefreshTokens
             {
                 RefreshToken = newJwtToken.RefreshToken,
-                UserName = username
+                UserName = username,
+                ExpirationTime = DateTime.Now.AddMinutes(5),
             };
 
-            userServiceRepository.DeleteUserRefreshTokens(username, token.RefreshToken);
             userServiceRepository.AddUserRefreshTokens(obj);
-            userServiceRepository.SaveCommit();*/
-
+            userServiceRepository.DeleteUserRefreshTokens(username, token.RefreshToken);
+            userServiceRepository.SaveCommit();
             var response = new LoginResponseDto
             {
                 Token = newJwtToken.AccessToken,
-                ReToken = token.RefreshToken,
+                ReToken = newJwtToken.RefreshToken,
                 Email = username,
                 Roles = roles.ToList()
             };

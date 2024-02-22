@@ -15,6 +15,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<CRUDContext>(options => 
 options.UseSqlServer(builder.Configuration.GetConnectionString("CRUD")));
 
+// Add IHttpContextAccessor and configure IUriService
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSingleton<IUriService, UriServices>(o =>
+{
+    var accessor = o.GetRequiredService<IHttpContextAccessor>();
+    var request = accessor.HttpContext.Request;
+    var uri = $"{request.Scheme}://{request.Host.ToUriComponent()}";
+    return new UriServices(uri);
+});
 builder.Services.AddControllers();
 
 builder.Services.AddIdentity<AppUsers, IdentityRole>()
